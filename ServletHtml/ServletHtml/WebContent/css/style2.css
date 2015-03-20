@@ -1,0 +1,133 @@
+@import '//fonts.googleapis.com/css?family=Lato:400,400italic|Arvo:700,400,400italic';
+
+body {
+    background: #F0EFE7;
+    margin: 20px;
+    padding: 0;
+    font: 15px/1.5 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #4E443C;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arvo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-weight: normal;
+  text-rendering: optimizelegibility;
+}
+
+.body-info
+{ 
+padding-left:20px;
+padding-right:20px
+}
+
+form  .checklist{
+background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+position:left;
+width:550px;
+height:250px;
+font-family: Tahoma, Geneva, sans-serif;
+font-size: 24px;
+font-style: italic;
+line-height: 24px;
+font-weight: bold;
+color: #09C;
+text-decoration: none;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+padding:10px;
+border: 1px solid #999;
+border: inset 1px solid #333;
+-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+h1 {
+    color: #4E443C;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h2, h2 a {
+    color: #F14E32;
+}
+
+h3, h3 a {
+  color: #0388A6;
+}
+
+a {
+  color: #0388A6;
+}
+
+pre {
+  border:1px solid #000;
+  overflow-x:auto;
+  background: #222;
+  color: #fff;
+  text-shadow: none;
+}
+.check{
+	font-size: 24px;
+}
+.wrapper {
+    max-width: 820px;
+    padding: 0 20px 40px 20px;
+    margin: auto;
+}
+
+html, body {
+	margin:0; 
+}
+ 
+body {
+	
+}
+#tab{
+	position:relative;
+	width:80%; max-width:1300px; min-width:1300px;	
+	margin:0 auto;;
+	text-align:center;
+}
+
+#tab #menu{
+	/*font:12px verdana, arial,scans-serif;/*font size*/*/
+	margin:0 auto;
+}
+#tab #menu, #tab #menu li{
+	list-style:none;/*remove default list format*/
+	padding:0;/*å°†é»˜è®¤çš„å†…è¾¹è·�åŽ»æŽ‰*/
+	margin:0 auto;/*å°†é»˜è®¤çš„å¤–è¾¹è·�åŽ»æŽ‰*/
+	float:left;
+	
+}
+#tab #menu li a {
+	display:table;/*å°†é“¾æŽ¥è®¾ä¸ºå�—çº§å…ƒç´ */
+	padding:8px 50px;/*è®¾ç½®å†…è¾¹è·�*/
+	background:#3A4953;/*è®¾ç½®èƒŒæ™¯è‰²*/
+	color:#fff;/*è®¾ç½®æ–‡å­—é¢œè‰² */
+	text-decoration:none;/*åŽ»æŽ‰ä¸‹åˆ’çº¿*/
+	border-right:1px solid:#000;
+	background:#146C9C;
+	
+}
+
+#tab #menu li a:hover {
+ background:#146C9C;
+ color:#fff;
+ text-decoration:none;
+ border-right:1px solid #000;
+}
+#tab #menu li a.last {
+ border-right:0; /* åŽ»æŽ‰å·¦ä¾§è¾¹æ¡† */
+}
+
+ #description{ color: #ff0000;
+text-align: center;
+color: black;
+  font-family: arial;
+  font-size: 40px;
+ }

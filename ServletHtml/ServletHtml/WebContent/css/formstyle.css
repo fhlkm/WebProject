@@ -1,0 +1,30 @@
+
+body {
+	padding: 30px
+}
+
+form {
+	display: block;
+	margin: 20px auto;
+	background: #eee;
+	border-radius: 10px;
+	padding: 15px
+}
+
+#person{
+	
+	font-style:bold;
+	width:300px;
+}
+#part{
+	margin:0cm 0cm 0cm 18px;
+    font-size:23px;
+    font-style:bold;
+	width:300px;
+}
+#description{
+	
+    font-size:23px;
+    font-style:bold;
+	width:800px;
+}

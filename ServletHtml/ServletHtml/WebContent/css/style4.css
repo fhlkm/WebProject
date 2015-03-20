@@ -1,0 +1,62 @@
+/****************************************
+
+*****************************************/
+*{margin:0;padding:0;font-size:12px;}
+body{background:url(../image/bg.gif);}
+.wrapper{width:60%;margin:0 auto;}
+h1{width:100%;margin:0 auto;line-height:40px;height:50px;text-align:center;color:#fff;font-size:60px;border-bottom:1px #fff solid;margin-top: 20px;padding-bottom: 10px;}
+h2{width:100%;margin:0 auto;line-height:30px;height:30px;text-align:center;color:#fff;}
+a:link,a:visited{color:#fff;}
+a:hover{color:#AA0000;}
+/*Container width*/
+.sharp{width:136px;height:162px;margin-top:20px;float:left;margin-left:10px;display:inline;}
+.sharp .content div{padding:10px;text-indent:2em;}
+.content{height:132px;}/*the height equals the height of picture-8px*/
+
+/*round corner–--------------------------------*/
+.b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8{height:1px; font-size:1px; overflow:hidden; display:block;}
+.b1,.b8{margin:0 5px;}
+.b2,.b7{margin:0 3px;border-right:2px solid; border-left:2px solid;}
+.b3,.b6{margin:0 2px;border-right:1px solid; border-left:1px solid;}
+.b4,.b5{margin:0 1px;border-right:1px solid; border-left:1px solid; height:2px;}
+
+/*Movement of the picture, Top*/
+.sharp b.b2{background-position:-4px top;}
+.sharp b.b3{background-position:-2px -1px;}
+.sharp b.b4{background-position:-1px -2px;}
+/*Movemnet of the picture,Bottom*/
+.sharp b.b7{background-position:-4px bottom;}
+.sharp b.b6{background-position:-2px bottom;}
+.sharp b.b5{background-position:-1px bottom;}
+
+/*Color shceme one----------------------------------------*/
+
+/**Characters color**/
+.description{font-size:20px; font-style:bold;color:yellow;text-align:center;margin-top:2%}
+/*Frame color*/
+.color1 .b2,.color1 .b3,.color1 .b4,.color1 .b5,.color1 .b6,.color1 .b7,.color1 .content{border-color:#262626;}
+
+/*Pictures directory*/
+.color1 .b2,.color1 .b3,.color1 .b4,.color1 h3,.color1 .b5,.color1 .b6,.color1 .b7,.color1 .content{background:url(../image/edit_clear.png) no-repeat;}
+.color1 .content{background-position:left -4px;}
+
+/*Color scheme two----------------------------------------*/
+/*Frame color*/
+.color2 .b2,.color2 .b3,.color2 .b4,.color2 .b5,.color2 .b6,.color2 .b7,.color2 .content{border-color:#262626;}
+
+/*Pictures directory*/
+.color2 .b2,.color2 .b3,.color2 .b4,.color2 h3,.color2 .b5,.color2 .b6,.color2 .b7,.color2 .content{background:url(../image/repair.png) no-repeat;}
+.color2 .content{background-position:left -4px;}
+
+/*--------Color scheme three--------------------------------*/
+.color3 .b2,.color3 .b3,.color3 .b4,.color3 .b5,.color3 .b6,.color3 .b7,.color3 .content{border-color:#262626;}
+
+.color3 .b2,.color3 .b3,.color3 .b4,.color3 h3,.color3 .b5,.color3 .b6,.color3 .b7,.color3 .content{background:url(../image/number_control.png) no-repeat;}
+.color3 .content{background-position:left -4px;}
+
+/*--------Color scheme four--------------------------------*/
+.color4 .b2,.color4 .b3,.color4 .b4,.color4 .b5,.color4 .b6,.color4 .b7,.color4 .content{border-color:#262626;}
+.color4 .b2,.color4 .b3,.color4 .b4,.color4 h3,.color4 .b5,.color4 .b6,.color4 .b7,.color4 .content{background:url(../image/equipment.png) no-repeat;}
+.color4 .content{background-position:left -4px;}
+/* exit */
+#exit  {float: right;margin-top: -20px;}

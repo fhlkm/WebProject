@@ -1,0 +1,162 @@
+<html>
+<head>
+<script language="javascript" type="text/JavaScript" src="cookie.js">
+	
+</script>
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet"  href="css/stylecollect.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap theme -->
+<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="css/formstyle.css" rel="stylesheet">
+<link rel="stylesheet"  href="css/style3.css">
+
+<!-- Custom styles for this template -->
+<link href="theme.css" rel="stylesheet">
+<script language="javascript" type="text/JavaScript"
+	src="jquery/jquery-1.8.3.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script src="http://malsup.github.com/jquery.form.js"></script>
+
+
+<script language="javascript"  type="text/JavaScript"  src="cookie.js">
+</script>
+<script language="javascript" type="text/javascript">
+
+	$(document).ready(function() {
+		
+		$('form').submit(function(event) {
+			var person = document.getElementById("person");
+			var parts =document.getElementById("part");
+			var description = document.getElementById("description");
+			if(person.value.length ==0){
+				alert("Input Person Name!");
+				return;
+			}else if(parts.value.length==0){
+				alert("Input the Part Name!");
+				return;
+			}else if(description.value.length ==0){
+				alert("Input description!")
+				return;
+			}
+			waidAni();
+			$.ajax({
+				type : "POST",
+				url : "parts",
+				data : $("#parts").serialize(), // serializes the form's elements.
+				error : function(data) {
+					waidAni();
+					alert(data.responseText);
+				},
+				success : function(data) {
+					waidAni();
+					alert(data); // show response from the php script.
+				}
+			});
+		event.preventDefault();
+			
+			
+			
+			
+		});
+	});
+	
+	
+	window.onload =  function fillChecklist(){
+		checkUserAndExit();
+		waidAni();
+		$.ajax({
+			cache : false,
+			type : "POST",
+			url : "parts", 
+			data: {"command":"check"},
+			async : false,
+			error : function(request) {
+				waidAni();
+				if(request.status ==403){
+					alert(request.responseText);
+				}else
+				alert("send failure");
+			},
+			success : function(info) {
+				waidAni();
+				dynamicReport(info);
+				
+		
+			}
+		});
+	}
+	
+
+	function dynamicReport(data) {
+		var name="Person";
+		var time="Time";
+		var part="Part";
+		var description ="Description";
+		data =$.parseJSON(data);
+		var table = document.getElementById("partstable");
+		if (table.rows.length == 0) {
+			for (var i = 0; i <= data.length; i++) {
+				if (i == 0) {
+					var row = table.insertRow(0);
+					var cell = row.insertCell(0);
+					cell.innerHTML = name;
+					cell = row.insertCell(1);
+					cell.innerHTML = time;
+					cell = row.insertCell(2);
+					cell.innerHTML = part;
+					cell = row.insertCell(3);
+					cell.innerHTML = description;
+				} else {
+					var row = table.insertRow(i);
+					var cell = row.insertCell(0);
+					var temp_name = data[i - 1].Name;
+					temp_name = temp_name.substring(1,temp_name.length-1);
+					cell.innerHTML = temp_name;
+					cell = row.insertCell(1);
+					cell.innerHTML = data[i - 1].Date;
+					cell = row.insertCell(2);
+					var temp_part = data[i - 1].PART;
+					temp_part= temp_part.substring(1,temp_part.length-1);
+					cell.innerHTML = temp_part;
+					cell = row.insertCell(3);
+					var desc = data[i - 1].DESCRIPTION;
+					desc = desc.substring(1,desc.length-1);
+					desc ="<span>"+desc+"</span>";
+					desc = desc.replace(/\\r\\n/g, "</span>   <span>");
+					cell.innerHTML = desc;
+				}//end else
+
+			}//end for
+		}//end if
+	}
+	
+</script>
+
+</head>
+<body role="document">
+	<div class="jumbotron">
+		<form action="" method="post" id="parts">
+			<p>
+				Person: <input type="text" name="person" id="person" />
+			</p>
+			<p>
+				Parts: <input type="text" name="part" id="part" />
+			</p>
+			<textarea id="description"  id="description" name="description" rows="4" cols="50"></textarea><br/><br/>
+			
+			<input class="btn btn-primary btn-sm"  id="submit" type="submit" value="Submit" />
+		</form>
+		
+		<div>
+				<table id="partstable"></table>
+		</div>
+			<div id="loading-div-background">
+		<div id="loading-div" class="ui-corner-all">
+			<img src="image/animated-gif.gif" id="animated-gif"
+				 />
+		</div>
+	</div>
+	</div>
+</body>
+</html>

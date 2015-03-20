@@ -1,0 +1,19 @@
+form { display: block; margin: 20px auto; background: #eee; border-radius: 10px; padding: 15px }
+/* must set the innerHtml */
+table{
+	border: 1px solid black;
+	background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+	background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+	font-size: 20px;
+	cellpadding="10";
+	cellspacing="10";
+	text-align:left;
+	bordercolor:#0000ff;
+	bordercolorlight:black;
+	bordercolordark:black;
+}
+table,td {
+	border: 1px solid black;
+	background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+	background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+}
